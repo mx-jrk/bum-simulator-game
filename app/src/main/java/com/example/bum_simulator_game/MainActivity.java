@@ -3,8 +3,10 @@ package com.example.bum_simulator_game;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,12 +15,19 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity{
     SharedPreferences sPref;
     final String SAVED_TEXT = "saved_text";
-
+    Unit unit;
     TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        upload_Data();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        load_Data();
         upload_Data();
     }
 
@@ -45,31 +54,31 @@ public class MainActivity extends AppCompatActivity{
         Unit.set_Values(info.split("\n"));
 
         tv = findViewById(R.id.days_lived);
-        tv.setText(tv.getText() + Integer.toString(Unit.Days_Lived));
+        tv.setText("Дней прожито: " + Unit.Days_Lived );
 
         tv = findViewById(R.id.health);
-        tv.setText(tv.getText() + Integer.toString(Unit.Health));
+        tv.setText("Здоровье: " + Unit.Health );
 
         tv = findViewById(R.id.money);
-        tv.setText(tv.getText() + Integer.toString(Unit.Money));
+        tv.setText("Деньги: " + Unit.Money);
 
         tv = findViewById(R.id.level);
-        tv.setText(tv.getText() + Unit.Level);
+        tv.setText("Соц. статус: " + Unit.Level);
 
         tv = findViewById(R.id.education);
-        tv.setText(tv.getText() + Unit.Education);
+        tv.setText("Образование: " + Unit.Education);
 
         tv = findViewById(R.id.work);
-        tv.setText(tv.getText() + Unit.Work);
+        tv.setText("Работа: " + Unit.Work);
 
         tv = findViewById(R.id.transport);
-        tv.setText(tv.getText() + Unit.Transport);
+        tv.setText("Транпорт: " + Unit.Transport);
 
         tv = findViewById(R.id.residence);
-        tv.setText(tv.getText() + Unit.Residence);
+        tv.setText("Дом: " + Unit.Residence);
 
         tv = findViewById(R.id.clothes);
-        tv.setText(tv.getText() + Unit.Clothes);
+        tv.setText("Одежда: " + Unit.Clothes);
     }
 
     private void create_Data() {
@@ -83,4 +92,10 @@ public class MainActivity extends AppCompatActivity{
     }
 
 
+    public void Open_Work_Page(View view) {
+        Intent intent = new Intent(this, Works_Page.class);
+        intent.putExtra("unit", unit);
+        startActivity(intent);
+
+    }
 }
