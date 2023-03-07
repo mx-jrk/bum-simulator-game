@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -48,6 +49,14 @@ public class Unit implements Serializable {
         Transport = data[6];
         Residence = data[7];
         Clothes = data[8];
+    }
+    private static int indexOf(String[] arr, String s){
+        for (int i = 0; i < arr.length; i++)
+            if (Objects.equals(arr[i], s)) return i;
+        return -1;
+    }
+    public static boolean can_Work(String work_edu, int inv){
+        return indexOf(EDUCATIONS, Education) >= indexOf(EDUCATIONS, work_edu) && Money >= inv;
     }
 
     public static Work_Variants find_Work(String select_work) {

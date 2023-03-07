@@ -64,6 +64,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
+                android:id="@+id/work_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="work_selected"
@@ -73,6 +74,7 @@
                 android:layout_weight="1"/>
 
             <Button
+                android:id="@+id/work_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="work_selected"
@@ -86,6 +88,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
+                android:id="@+id/work_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="work_selected"
@@ -95,6 +98,7 @@
                 android:layout_weight="1"/>
 
             <Button
+                android:id="@+id/work_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="work_selected"
@@ -108,6 +112,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
+                android:id="@+id/work_5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="work_selected"
@@ -117,6 +122,7 @@
                 android:layout_weight="1"/>
 
             <Button
+                android:id="@+id/work_6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="work_selected"
@@ -130,6 +136,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
+                android:id="@+id/work_7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="work_selected"
@@ -139,6 +146,7 @@
                 android:layout_weight="1"/>
 
             <Button
+                android:id="@+id/work_8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="work_selected"
@@ -152,6 +160,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
+                android:id="@+id/work_9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="work_selected"
@@ -161,6 +170,7 @@
                 android:layout_weight="1"/>
 
             <Button
+                android:id="@+id/work_10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="work_selected"
@@ -174,6 +184,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
+                android:id="@+id/work_11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="work_selected"
@@ -183,6 +194,7 @@
                 android:layout_weight="1"/>
 
             <Button
+                android:id="@+id/work_12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="work_selected"
@@ -196,6 +208,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
+                android:id="@+id/work_13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="work_selected"
@@ -205,6 +218,7 @@
                 android:layout_weight="1"/>
 
             <Button
+                android:id="@+id/work_14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="work_selected"
@@ -218,6 +232,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
+                android:id="@+id/work_15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="work_selected"
@@ -227,6 +242,7 @@
                 android:layout_weight="1"/>
 
             <Button
+                android:id="@+id/work_16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="work_selected"

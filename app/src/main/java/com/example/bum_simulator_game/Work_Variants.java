@@ -8,6 +8,7 @@ public class Work_Variants {
     public static int Health_Conditions;
     public static String Education_Conditions;
     public static int Days_Skip;
+
 }
 
 class Trash_Heaps extends Work_Variants {
