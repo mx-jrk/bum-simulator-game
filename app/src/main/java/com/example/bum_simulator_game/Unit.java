@@ -9,6 +9,7 @@ import java.util.Objects;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.content.SharedPreferences.Editor;
@@ -59,6 +60,19 @@ public class Unit implements Serializable {
     }
     public static boolean can_Do(String work_edu, int inv){
         return indexOf(EDUCATIONS, Education) >= indexOf(EDUCATIONS, work_edu) && Money >= inv;
+    }
+    public static int edu_status(String edu_name) {
+       if (indexOf(EDUCATIONS, Education) >= indexOf(EDUCATIONS, edu_name)) return Color.GREEN;
+       if (indexOf(EDUCATIONS, Education) - indexOf(EDUCATIONS, edu_name) != -1) return Color.RED;
+       return 0;
+    }
+
+    public static Education_Variants fing_Education(String select_education){
+        if (select_education.equals(new Live_lessons().Name)) return new Live_lessons();
+        if (select_education.equals(new Encyclopedia().Name)) return new Encyclopedia();
+        if (select_education.equals(new School().Name)) return new School();
+        if (select_education.equals(new Univercity().Name)) return new Univercity();
+        return new Education_Variants();
     }
 
     public static Health_Variants find_Health(String select_health){

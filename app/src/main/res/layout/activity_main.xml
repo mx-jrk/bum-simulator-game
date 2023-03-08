@@ -152,6 +152,11 @@
                 android:layout_height="wrap_content"
                 android:text="Лечиться"
                 android:onClick="Open_Health_Page"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Образование"
+            android:onClick="Open_Education_Page"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

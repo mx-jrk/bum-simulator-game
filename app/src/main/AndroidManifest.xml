@@ -13,6 +13,13 @@
         android:theme="@style/Theme.Bum_Simulator_Game"
         tools:targetApi="31">
         <activity
+            android:name=".Education_Page"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Health_Page"
             android:exported="false">
             <meta-data

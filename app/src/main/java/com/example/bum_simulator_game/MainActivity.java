@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity{
     private void create_Data() {
         sPref = getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor ed = sPref.edit();
-        ed.putString(SAVED_TEXT, "0" + "\n" + "100" + "\n" + "500" +
+        ed.putString(SAVED_TEXT, "0" + "\n" + "100" + "\n" + "500000" +
                 "\n" + "Бомж" + "\n" + "Жизненные уроки" + "\n" + "Безработный" +
                 "\n" + "Ноги"  + "\n" + "Подземка"  + "\n" + "Шмот с помойки");
         ed.commit();
@@ -102,6 +102,12 @@ public class MainActivity extends AppCompatActivity{
 
     public void Open_Health_Page(View view) {
         Intent intent = new Intent(this, Health_Page.class);
+        intent.putExtra("unit", unit);
+        startActivity(intent);
+    }
+
+    public void Open_Education_Page(View view) {
+        Intent intent = new Intent(this, Education_Page.class);
         intent.putExtra("unit", unit);
         startActivity(intent);
     }
