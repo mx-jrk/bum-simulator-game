@@ -99,4 +99,10 @@ public class MainActivity extends AppCompatActivity{
         startActivity(intent);
 
     }
+
+    public void Open_Health_Page(View view) {
+        Intent intent = new Intent(this, Health_Page.class);
+        intent.putExtra("unit", unit);
+        startActivity(intent);
+    }
 }

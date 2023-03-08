@@ -147,6 +147,11 @@
                 android:layout_height="wrap_content"
                 android:text="Работать"
                 android:onClick="Open_Work_Page"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Лечиться"
+                android:onClick="Open_Health_Page"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

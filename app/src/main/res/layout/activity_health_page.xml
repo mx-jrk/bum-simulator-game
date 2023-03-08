@@ -65,20 +65,22 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="work_selected"
-                android:text="Найти лекарства на помойках(0)"
+                android:onClick="health_selected"
+                android:text="Купить нелецензионные таблы"
                 android:layout_marginRight="5dp"
                 android:textSize="12dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:id="@+id/health_1"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="work_selected"
-                android:text="Купить дешевые таблетки(1000)"
+                android:onClick="health_selected"
+                android:text="Купить дешевые таблетки"
                 android:layout_marginLeft="5dp"
                 android:textSize="12dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:id="@+id/health_2"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,20 +89,22 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="work_selected"
-                android:text="Позаниматься спортом(500)"
+                android:onClick="health_selected"
+                android:text="Позаниматься спортом"
                 android:layout_marginRight="5dp"
                 android:textSize="12dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:id="@+id/health_3"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="work_selected"
-                android:text="Лечь в больницу(30 000)"
+                android:onClick="health_selected"
+                android:text="Лечь в больницу"
                 android:layout_marginLeft="5dp"
                 android:textSize="12dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:id="@+id/health_4"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -109,20 +113,22 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="work_selected"
-                android:text="Купить импортные препараты(300 000)"
+                android:onClick="health_selected"
+                android:text="Купить импортные препараты"
                 android:layout_marginRight="5dp"
                 android:textSize="12dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:id="@+id/health_5"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="work_selected"
-                android:text="Комплексное лечение (1 000 000)"
+                android:onClick="health_selected"
+                android:text="Комплексное лечение"
                 android:layout_marginLeft="5dp"
                 android:textSize="12dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:id="@+id/health_6"/>
         </LinearLayout>
 
         <Button

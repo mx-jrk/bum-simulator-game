@@ -24,6 +24,8 @@ public class Unit implements Serializable {
             "Начальник в офисе", "Инвестор",
             "Гениральный директор",
             "Депутат", "Президент"};
+    private static String[] HEALTHS = {"Купить нелецензионные таблы", "Купить дешевые таблетки", "Позаниматься спортом",
+            "Лечь в больницу", "Купить импортные препараты", "Комплексное лечение"};
     private static String[] TRANSPORTS = {"Ноги, Велик, Мотоцикл, Жига, Автомобиль среднего класса, Автомобиль бизнес класса, Личный вертолет, Личный самолет"};
     private static String[] RESIDENCES = {"Подземка", "Палатка", "Койка в общаге", "Комната у бабки", "Съемная квартирка", "Съемные аппартаменты", "Квартира", "Дом", "Особняк"};
     private static String[] CLOTHES = {"Шмот с помойки", "Одежда с рынка", "Одежда из секонда", "Одежда из фирменного магазина", "Офисый костюм", "Итальянский смокинг"};
@@ -55,14 +57,23 @@ public class Unit implements Serializable {
             if (Objects.equals(arr[i], s)) return i;
         return -1;
     }
-    public static boolean can_Work(String work_edu, int inv){
+    public static boolean can_Do(String work_edu, int inv){
         return indexOf(EDUCATIONS, Education) >= indexOf(EDUCATIONS, work_edu) && Money >= inv;
+    }
+
+    public static Health_Variants find_Health(String select_health){
+        if (select_health.equals(new Unlicensed_tables().Name)) return new Unlicensed_tables();
+        if (select_health.equals(new Cheap_tablets().Name)) return new Cheap_tablets();
+        if (select_health.equals(new Sport().Name)) return new Sport();
+        if (select_health.equals(new Hospital().Name)) return new Hospital();
+        if (select_health.equals(new Expencive_Tablets().Name)) return new Expencive_Tablets();
+        if (select_health.equals(new Complex().Name)) return new Complex();
+        return new Health_Variants();
     }
 
     public static Work_Variants find_Work(String select_work) {
 
         if (select_work.equals(new Trash_Heaps().Name)){
-            System.out.println(select_work + " " + new Trash_Heaps().Name);
             return new Trash_Heaps();
         }
         if (select_work.equals(new Rob_Stall().Name) ){

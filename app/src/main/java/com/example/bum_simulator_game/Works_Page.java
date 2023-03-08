@@ -33,60 +33,60 @@ public class Works_Page extends AppCompatActivity {
     private void color_buttons(){
         Button btn;
         btn = findViewById(R.id.work_1);
-        if (!(Unit.can_Work(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
+        if (!(Unit.can_Do(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
 
         btn = findViewById(R.id.work_2);
-        if (!(Unit.can_Work(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
+        if (!(Unit.can_Do(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
 
         btn = findViewById(R.id.work_3);
-        if (!(Unit.can_Work(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
+        if (!(Unit.can_Do(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
 
         btn = findViewById(R.id.work_4);
-        if (!(Unit.can_Work(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
+        if (!(Unit.can_Do(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
 
         btn = findViewById(R.id.work_5);
-        if (!(Unit.can_Work(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
+        if (!(Unit.can_Do(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
 
         btn = findViewById(R.id.work_6);
-        if (!(Unit.can_Work(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
+        if (!(Unit.can_Do(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
 
         btn = findViewById(R.id.work_7);
-        if (!(Unit.can_Work(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
+        if (!(Unit.can_Do(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
 
         btn = findViewById(R.id.work_8);
-        if (!(Unit.can_Work(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
+        if (!(Unit.can_Do(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
 
         btn = findViewById(R.id.work_9);
-        if (!(Unit.can_Work(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
+        if (!(Unit.can_Do(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
 
         btn = findViewById(R.id.work_10);
-        if (!(Unit.can_Work(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
+        if (!(Unit.can_Do(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
 
         btn = findViewById(R.id.work_11);
-        if (!(Unit.can_Work(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
+        if (!(Unit.can_Do(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
 
         btn = findViewById(R.id.work_12);
-        if (!(Unit.can_Work(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
+        if (!(Unit.can_Do(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
 
         btn = findViewById(R.id.work_13);
-        if (!(Unit.can_Work(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
+        if (!(Unit.can_Do(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
 
         btn = findViewById(R.id.work_14);
-        if (!(Unit.can_Work(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
+        if (!(Unit.can_Do(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
 
         btn = findViewById(R.id.work_15);
-        if (!(Unit.can_Work(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
+        if (!(Unit.can_Do(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
 
         btn = findViewById(R.id.work_16);
-        if (!(Unit.can_Work(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
+        if (!(Unit.can_Do(Unit.find_Work(btn.getText().toString()).Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)) btn.setBackgroundColor(Color.RED);
     }
 
     public void work_selected(View view) {
         Unit.find_Work(((Button) view).getText().toString());
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        if (!(Unit.can_Work(Work_Variants.Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)){
+        if (!(Unit.can_Do(Work_Variants.Education_Conditions, Work_Variants.Investment) && Unit.Health >= Work_Variants.Health_Conditions)){
             builder.setTitle(Work_Variants.Name);
-            builder.setMessage("Вы не можете выполнять эту работу, так как не употребляете одному из минимальных требований:\n\n" +
+            builder.setMessage("Вы не можете выполнять эту работу, так как не удовлетворяете одному из минимальных требований:\n\n" +
                     "Здоровье: " + Work_Variants.Health_Conditions + "\n" +
                     "Образование: " + Work_Variants.Education_Conditions + "\n" +
                     "Вложения: " + Work_Variants.Investment);
@@ -97,11 +97,10 @@ public class Works_Page extends AppCompatActivity {
                 }
             });
             builder.create().show();
-            return;
         }
         else {
             builder.setTitle(Work_Variants.Name);
-            builder.setMessage("Вы можете выполнить эту работу. Доход: " + Work_Variants.Income + "\n" + "Затраты на выполнение действия:\n\n" +
+            builder.setMessage("Вы можете выполнить эту работу.\nДоход: " + Work_Variants.Income + "\n" + "Затраты на выполнение действия:\n\n" +
                     "Здоровье: " + Work_Variants.Health_Conditions + "\n" +
                     "Образование: " + Work_Variants.Education_Conditions + "\n" +
                     "Вложения: " + Work_Variants.Investment);
