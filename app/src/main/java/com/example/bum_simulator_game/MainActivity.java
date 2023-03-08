@@ -111,4 +111,19 @@ public class MainActivity extends AppCompatActivity{
         intent.putExtra("unit", unit);
         startActivity(intent);
     }
+
+    public void Open_Transport_Page(View view) {
+        Intent intent = new Intent(this, Transports_Page.class);
+        startActivity(intent);
+    }
+
+    public void Open_Residence_Page(View view) {
+        Intent intent = new Intent(this, Residences_Page.class);
+        startActivity(intent);
+    }
+
+    public void Open_Clothes_Page(View view) {
+        Intent intent = new Intent(this, Clotheses_Page.class);
+        startActivity(intent);
+    }
 }

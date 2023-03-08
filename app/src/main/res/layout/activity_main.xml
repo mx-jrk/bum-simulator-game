@@ -157,6 +157,22 @@
             android:layout_height="wrap_content"
             android:text="Образование"
             android:onClick="Open_Education_Page"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Транспорт"
+            android:onClick="Open_Transport_Page"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Жильё"
+            android:onClick="Open_Residence_Page"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Одежда"
+            android:onClick="Open_Clothes_Page"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

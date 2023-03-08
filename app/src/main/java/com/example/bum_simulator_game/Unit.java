@@ -27,8 +27,8 @@ public class Unit implements Serializable {
             "Депутат", "Президент"};
     private static String[] HEALTHS = {"Купить нелецензионные таблы", "Купить дешевые таблетки", "Позаниматься спортом",
             "Лечь в больницу", "Купить импортные препараты", "Комплексное лечение"};
-    private static String[] TRANSPORTS = {"Ноги, Велик, Мотоцикл, Жига, Автомобиль среднего класса, Автомобиль бизнес класса, Личный вертолет, Личный самолет"};
-    private static String[] RESIDENCES = {"Подземка", "Палатка", "Койка в общаге", "Комната у бабки", "Съемная квартирка", "Съемные аппартаменты", "Квартира", "Дом", "Особняк"};
+    private static String[] TRANSPORTS = {"Ноги", "Велик", "Мотоцикл", "Жига", "Автомобиль среднего класса", "Автомобиль бизнес класса", "Личный вертолет", "Личный самолет"};
+    private static String[] RESIDENCES = {"Подземка", "Палатка", "Койка в общаге", "Съемная квартирка", "Съемные аппартаменты", "Квартира", "Дом", "Особняк"};
     private static String[] CLOTHES = {"Шмот с помойки", "Одежда с рынка", "Одежда из секонда", "Одежда из фирменного магазина", "Офисый костюм", "Итальянский смокинг"};
 
     public static int Days_Lived;
@@ -61,10 +61,63 @@ public class Unit implements Serializable {
     public static boolean can_Do(String work_edu, int inv){
         return indexOf(EDUCATIONS, Education) >= indexOf(EDUCATIONS, work_edu) && Money >= inv;
     }
+
+    public static int clothes_status(String cloth_name){
+        if (indexOf(CLOTHES, Clothes) >= indexOf(CLOTHES, cloth_name)) return Color.GREEN;
+        if (indexOf(CLOTHES, Clothes) - indexOf(CLOTHES, cloth_name) != -1) return Color.RED;
+        return 0xFF3700B3;
+    }
+
+    public static int residence_status(String res_name){
+        if (indexOf(RESIDENCES, Residence) >= indexOf(RESIDENCES, res_name)) return Color.GREEN;
+        if (indexOf(RESIDENCES, Residence) - indexOf(RESIDENCES, res_name) != -1) return Color.RED;
+        return 0xFF3700B3;
+    }
+
+    public static int transport_status(String tranp_name){
+        if (indexOf(TRANSPORTS, Transport) >= indexOf(TRANSPORTS, tranp_name)) return Color.GREEN;
+        if (indexOf(TRANSPORTS, Transport) - indexOf(TRANSPORTS, tranp_name) != -1) return Color.RED;
+        return 0xFF3700B3;
+    }
     public static int edu_status(String edu_name) {
        if (indexOf(EDUCATIONS, Education) >= indexOf(EDUCATIONS, edu_name)) return Color.GREEN;
        if (indexOf(EDUCATIONS, Education) - indexOf(EDUCATIONS, edu_name) != -1) return Color.RED;
-       return 0;
+       return 0xFF3700B3;
+    }
+
+    public static Clothes_Variants find_Clothes(String selected_clothes){
+        if (selected_clothes.equals(new Dump().Name)) return new Dump();
+        if (selected_clothes.equals(new Market().Name)) return new Market();
+        if (selected_clothes.equals(new Second().Name)) return new Second();
+        if (selected_clothes.equals(new Shop().Name)) return new Shop();
+        if (selected_clothes.equals(new Office().Name)) return new Office();
+        if (selected_clothes.equals(new Italian().Name)) return new Italian();
+        return new Clothes_Variants();
+
+    }
+
+    public static Residence_Variants find_Residence(String selected_residence){
+        if (selected_residence.equals(new Metro().Name)) return new Metro();
+        if (selected_residence.equals(new Tent().Name)) return new Tent();
+        if (selected_residence.equals(new Dorm().Name)) return new Dorm();
+        if (selected_residence.equals(new Rented_flat().Name)) return new Rented_flat();
+        if (selected_residence.equals(new Rented_apartments().Name)) return new Rented_apartments();
+        if (selected_residence.equals(new Flat().Name)) return new Flat();
+        if (selected_residence.equals(new House().Name)) return new House();
+        if (selected_residence.equals(new Mansion().Name)) return new Mansion();
+        return new Residence_Variants();
+    }
+
+    public static Transport_Variants find_Transport(String selected_transport){
+        if (selected_transport.equals(new Legs().Name)) return new Legs();
+        if (selected_transport.equals(new Bicycle().Name)) return new Bicycle();
+        if (selected_transport.equals(new Moto().Name)) return new Moto();
+        if (selected_transport.equals(new Zhiga().Name)) return new Zhiga();
+        if (selected_transport.equals(new Cheap_car().Name)) return new Cheap_car();
+        if (selected_transport.equals(new Expencive_car().Name)) return new Expencive_car();
+        if (selected_transport.equals(new Helicopter().Name)) return new Helicopter();
+        if (selected_transport.equals(new Airplane().Name)) return new Airplane();
+        return new Transport_Variants();
     }
 
     public static Education_Variants fing_Education(String select_education){

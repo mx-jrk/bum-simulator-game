@@ -9,14 +9,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Objects;
-
-public class Education_Page extends AppCompatActivity {
+public class Clotheses_Page extends AppCompatActivity {
     TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_education_page);
+        setContentView(R.layout.activity_clotheses_page);
+
         tv = findViewById(R.id.days_lived);
         tv.setText(tv.getText().toString() + Unit.Days_Lived );
 
@@ -28,36 +27,37 @@ public class Education_Page extends AppCompatActivity {
         color_buttons();
     }
 
-    private void color_buttons(){
+    private void color_buttons() {
         Button btn;
-        int res;
 
-        btn = findViewById(R.id.edu_1);
-        res = Unit.edu_status(btn.getText().toString());
-        if (res != 0) btn.setBackgroundColor(res);
+        btn = findViewById(R.id.cloth_1);
+        btn.setBackgroundColor(Unit.clothes_status(btn.getText().toString()));
 
-        btn = findViewById(R.id.edu_2);
-        res = Unit.edu_status(btn.getText().toString());
-        if (res != 0) btn.setBackgroundColor(res);
+        btn = findViewById(R.id.cloth_2);
+        btn.setBackgroundColor(Unit.clothes_status(btn.getText().toString()));
 
-        btn = findViewById(R.id.edu_3);
-        res = Unit.edu_status(btn.getText().toString());
-        if (res != 0) btn.setBackgroundColor(res);
+        btn = findViewById(R.id.cloth_3);
+        btn.setBackgroundColor(Unit.clothes_status(btn.getText().toString()));
 
-        btn = findViewById(R.id.edu_4);
-        res = Unit.edu_status(btn.getText().toString());
-        if (res != 0) btn.setBackgroundColor(res);
+        btn = findViewById(R.id.cloth_4);
+        btn.setBackgroundColor(Unit.clothes_status(btn.getText().toString()));
+
+        btn = findViewById(R.id.cloth_5);
+        btn.setBackgroundColor(Unit.clothes_status(btn.getText().toString()));
+
+        btn = findViewById(R.id.cloth_6);
+        btn.setBackgroundColor(Unit.clothes_status(btn.getText().toString()));
     }
 
-    public void education_selected(View view) {
-        Unit.fing_Education(((Button) view).getText().toString());
+    public void clothes_selected(View view) {
+        Unit.find_Clothes(((Button) view).getText().toString());
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(Education_Variants.Name);
-        if (Unit.edu_status(Education_Variants.Name) != 0xFF3700B3){
-            builder.setMessage("Вы не можете получить это образование, так как не удовлетворяете одному из минимальных требований:\n"+
-                    "Образование: Вы не получили предыдущее образование\n" +
-                    "Образование: Вы уже получили это образование\n"+
-                    "Стоимость: " + Education_Variants.Cost);
+        builder.setTitle(Clothes_Variants.Name);
+        if (Unit.clothes_status(Clothes_Variants.Name) != 0xFF3700B3){
+            builder.setMessage("Вы не можете купить эту одежду, так как не удовлетворяете одному из минимальных требований:\n\n" +
+                    "Оджеда: У вас не куплена предыдущая оджеда\n" +
+                    "Одежда: У вас уже куплена эта оджеда\n"  +
+                    "Стоимость: " + Clothes_Variants.Cost);
             builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() { // Кнопка ОК
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -67,13 +67,13 @@ public class Education_Page extends AppCompatActivity {
             builder.create().show();
         }
         else {
-            builder.setMessage("Вы можете получить это образование!\n" + "Затраты на выполнение действия:\n" +
-                    "Стоимость: " + Education_Variants.Cost);
-            builder.setPositiveButton("Обучиться!", new DialogInterface.OnClickListener() {
+            builder.setMessage("Вы можете приобрести эту одежду!\nЗатраты на выполние действия:\n" +
+                    "Стоимость: " + Clothes_Variants.Cost);
+            builder.setPositiveButton("Купить!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss(); // Отпускает диалоговое окно
-                    go_edu();
+                    buy_clothes();
                 }
             });
             builder.setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
@@ -85,12 +85,11 @@ public class Education_Page extends AppCompatActivity {
             });
             builder.create().show();
         }
-
     }
 
-    private void go_edu() {
-        Unit.Money -= Education_Variants.Cost;
-        Unit.Education = Education_Variants.Name;
+    private void buy_clothes() {
+        Unit.Money -= Clothes_Variants.Cost;
+        Unit.Clothes = Clothes_Variants.Name;
 
         tv = findViewById(R.id.money);
         tv.setText(tv.getText().toString().split(" ")[0] +" " +  Unit.Money);
