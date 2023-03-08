@@ -173,6 +173,17 @@
             android:layout_height="wrap_content"
             android:text="Одежда"
             android:onClick="Open_Clothes_Page"/>
+        <View
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+        <Button
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сбросить результаты и начать сначала"
+            android:onClick="reset_game"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

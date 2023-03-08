@@ -60,7 +60,7 @@ public class Transports_Page extends AppCompatActivity {
         Unit.find_Transport(((Button) view).getText().toString());
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(Transport_Variants.Name);
-        if (Unit.transport_status(Transport_Variants.Name) != 0xFF3700B3){
+        if (Unit.transport_status(Transport_Variants.Name) != 0xFF3700B3 || Unit.Money < Transport_Variants.Cost){
             builder.setMessage("Вы не можете купить этот транспорт, так как не удовлетворяете одному из минимальных требований:\n\n" +
                     "Транспорт: У вас не куплен предыдущий транспорт\n" +
                     "Транспорт: У вас уже куплен этот траспорт\n"  +

@@ -53,7 +53,7 @@ public class Education_Page extends AppCompatActivity {
         Unit.fing_Education(((Button) view).getText().toString());
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(Education_Variants.Name);
-        if (Unit.edu_status(Education_Variants.Name) != 0xFF3700B3){
+        if (Unit.edu_status(Education_Variants.Name) != 0xFF3700B3 || Unit.Money < Education_Variants.Cost){
             builder.setMessage("Вы не можете получить это образование, так как не удовлетворяете одному из минимальных требований:\n"+
                     "Образование: Вы не получили предыдущее образование\n" +
                     "Образование: Вы уже получили это образование\n"+

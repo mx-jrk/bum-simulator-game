@@ -60,7 +60,7 @@ public class Residences_Page extends AppCompatActivity {
         Unit.find_Residence(((Button) view).getText().toString());
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(Residence_Variants.Name);
-        if (Unit.residence_status(Residence_Variants.Name) != 0xFF3700B3){
+        if (Unit.residence_status(Residence_Variants.Name) != 0xFF3700B3 || Unit.Money < Residence_Variants.Cost){
             builder.setMessage("Вы не можете купить это жильё, так как не удовлетворяете одному из минимальных требований:\n\n" +
                     "Жильё: У вас не куплено предыдущее жильё\n" +
                     "Жильё: У вас уже куплено это жильё\n"  +

@@ -53,7 +53,7 @@ public class Clotheses_Page extends AppCompatActivity {
         Unit.find_Clothes(((Button) view).getText().toString());
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(Clothes_Variants.Name);
-        if (Unit.clothes_status(Clothes_Variants.Name) != 0xFF3700B3){
+        if (Unit.clothes_status(Clothes_Variants.Name) != 0xFF3700B3 || Unit.Money < Clothes_Variants.Cost){
             builder.setMessage("Вы не можете купить эту одежду, так как не удовлетворяете одному из минимальных требований:\n\n" +
                     "Оджеда: У вас не куплена предыдущая оджеда\n" +
                     "Одежда: У вас уже куплена эта оджеда\n"  +

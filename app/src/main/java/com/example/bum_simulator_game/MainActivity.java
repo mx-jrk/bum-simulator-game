@@ -21,13 +21,14 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        create_Data();
         upload_Data();
+        Unit.change_Status();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        Unit.change_Status();
         load_Data();
         upload_Data();
     }
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        Unit.change_Status();
         load_Data();
     }
 
@@ -85,12 +87,14 @@ public class MainActivity extends AppCompatActivity{
     private void create_Data() {
         sPref = getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor ed = sPref.edit();
-        ed.putString(SAVED_TEXT, "0" + "\n" + "100" + "\n" + "500000" +
+        ed.putString(SAVED_TEXT, "0" + "\n" + "100" + "\n" + "500" +
                 "\n" + "Бомж" + "\n" + "Жизненные уроки" + "\n" + "Безработный" +
                 "\n" + "Ноги"  + "\n" + "Подземка"  + "\n" + "Шмот с помойки");
         ed.commit();
         upload_Data();
     }
+
+
 
 
     public void Open_Work_Page(View view) {
@@ -125,5 +129,10 @@ public class MainActivity extends AppCompatActivity{
     public void Open_Clothes_Page(View view) {
         Intent intent = new Intent(this, Clotheses_Page.class);
         startActivity(intent);
+    }
+
+    public void reset_game(View view) {
+        create_Data();
+        upload_Data();
     }
 }

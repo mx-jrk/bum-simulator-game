@@ -42,6 +42,51 @@ public class Unit implements Serializable {
     public static String Residence;
     public static String Clothes;
 
+    public static void change_Status(){
+        String lev = "Бомж";
+        if (indexOf(EDUCATIONS, Education) > indexOf(EDUCATIONS, "Жизненные уроки")
+        && indexOf(RESIDENCES, Residence) > indexOf(RESIDENCES, "Подземка")) lev = "Образованный бомж";
+        else {
+            Unit.Level = lev;
+            return;
+        }
+        if (lev.equals("Образованный бомж") && indexOf(RESIDENCES, Residence) > indexOf(RESIDENCES, "Палатка")) lev = "На грани бедности";
+        else {
+            Unit.Level = lev;
+            return;
+        }
+        if (lev.equals("На грани бедности") && indexOf(RESIDENCES, Residence) > indexOf(RESIDENCES, "Койка в общаге")
+        && indexOf(EDUCATIONS, Education) > indexOf(EDUCATIONS, "Знания с энциклопедий")
+        && indexOf(TRANSPORTS, Transport) > indexOf(TRANSPORTS, "Велик")
+        && indexOf(CLOTHES, Clothes) > indexOf(CLOTHES, "Одежда из секонда")) lev = "Средний класс";
+        else {
+            Unit.Level = lev;
+            return;
+        }
+        if (lev.equals("Средний класс") && indexOf(RESIDENCES, Residence) > indexOf(RESIDENCES, "Съемная квартирка")
+        && indexOf(TRANSPORTS, Transport) > indexOf(TRANSPORTS, "Жига")
+        && indexOf(EDUCATIONS, Education) > indexOf(EDUCATIONS, "Школьное образование")) lev ="Статусный человек";
+        else {
+            Unit.Level = lev;
+            return;
+        }
+        if (lev.equals("Статусный человек") && indexOf(CLOTHES, Clothes) > indexOf(CLOTHES, "Одежда из фирменного магазина")
+        && indexOf(TRANSPORTS, Transport) > indexOf(TRANSPORTS, "Автомобиль среднего класса")
+        && indexOf(RESIDENCES, Residence) > indexOf(RESIDENCES, "Съемные аппартаменты")) lev = "Бизнесмен";
+        else {
+            Unit.Level = lev;
+            return;
+        }
+        if (lev.equals("Бизнесмен") && indexOf(TRANSPORTS, Transport) > indexOf(TRANSPORTS, "Автомобиль бизнес класса")
+        && indexOf(RESIDENCES, Residence) > indexOf(RESIDENCES, "Квартира")
+        && indexOf(CLOTHES, Clothes) > indexOf(CLOTHES, "Офисый костюм")) lev = "Президент";
+        else {
+            Unit.Level = lev;
+            return;
+        }
+        Unit.Level = lev;
+    }
+
     public static void set_Values(String[] data) {
         Days_Lived = Integer.parseInt(data[0]);
         Health = Integer.parseInt(data[1]);
