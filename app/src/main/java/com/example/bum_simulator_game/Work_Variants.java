@@ -122,7 +122,7 @@ class Seller extends Work_Variants {
     }
 }
 
-class Assistaint extends Work_Variants {
+class  Assistaint extends Work_Variants {
     public Assistaint(){
         Name = "Ассистент в офисе";
         Health_Сosts = 50;
